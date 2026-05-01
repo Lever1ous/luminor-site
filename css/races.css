@@ -1,0 +1,219 @@
+.races-page {
+  padding: 70px 7% 100px;
+}
+
+.races-hero {
+  max-width: 900px;
+  margin-bottom: 80px;
+  padding: 46px;
+  background: rgba(18, 14, 9, 0.78);
+  border: 1px solid rgba(216, 180, 106, 0.2);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
+}
+
+.races-hero h1 {
+  font-size: clamp(44px, 7vw, 78px);
+  color: #f4e5c9;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+.races-hero p {
+  color: #cfc0a3;
+  font-size: 18px;
+  max-width: 720px;
+}
+
+.race-category {
+  margin-bottom: 90px;
+}
+
+.race-category h2 {
+  color: #d8b46a;
+  font-size: 38px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(216, 180, 106, 0.18);
+  padding-bottom: 16px;
+}
+
+.races-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  align-items: start;
+}
+
+.race-card {
+  background: rgba(18, 14, 9, 0.86);
+  border: 1px solid rgba(216, 180, 106, 0.16);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  transition: 0.45s ease;
+}
+
+.race-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(216, 180, 106, 0.45);
+}
+
+.race-preview {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  background: #0d0a07;
+  overflow: hidden;
+  font-family: inherit;
+  text-align: left;
+}
+
+.race-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.7s ease;
+  filter: brightness(0.75) contrast(1.08);
+}
+
+.race-card:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.95) contrast(1.12);
+}
+
+.race-preview::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(8, 7, 5, 0.95), transparent 60%),
+    radial-gradient(circle at center, transparent, rgba(0, 0, 0, 0.35));
+}
+
+.race-preview::before {
+  content: "+";
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(216, 180, 106, 0.45);
+  color: #d8b46a;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  background: rgba(10, 8, 5, 0.65);
+}
+
+.race-card.active .race-preview::before {
+  content: "−";
+}
+
+.race-name {
+  position: absolute;
+  left: 26px;
+  right: 26px;
+  bottom: 24px;
+  z-index: 2;
+}
+
+.race-name h3 {
+  color: #f4e5c9;
+  font-size: 29px;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.race-name span {
+  color: #d8b46a;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.race-info {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 28px;
+  opacity: 0;
+  transform: translateY(-16px);
+  transition:
+    max-height 0.7s ease,
+    opacity 0.45s ease,
+    transform 0.45s ease,
+    padding 0.45s ease;
+}
+
+.race-info p {
+  color: #cfc0a3;
+  font-size: 17px;
+  margin-bottom: 18px;
+}
+
+.race-info ul {
+  padding-left: 18px;
+  color: #d8ccb3;
+}
+
+.race-info li {
+  margin-bottom: 8px;
+}
+
+.race-card.active {
+  grid-column: span 2;
+  border-color: rgba(216, 180, 106, 0.55);
+}
+
+.race-card.active .race-preview {
+  height: 520px;
+}
+
+.race-card.active .race-info {
+  max-height: 700px;
+  opacity: 1;
+  transform: translateY(0);
+  padding: 28px 28px 34px;
+}
+
+.active-link {
+  color: #d8b46a !important;
+}
+
+@media (max-width: 1100px) {
+  .races-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .race-card.active {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 700px) {
+  .races-page {
+    padding: 50px 6% 80px;
+  }
+
+  .races-hero {
+    padding: 30px 24px;
+  }
+
+  .races-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .race-card.active {
+    grid-column: span 1;
+  }
+
+  .race-preview,
+  .race-card.active .race-preview {
+    height: 380px;
+  }
+
+  .race-category h2 {
+    font-size: 31px;
+  }
+}
