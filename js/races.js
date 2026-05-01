@@ -12,10 +12,13 @@ raceCards.forEach((card) => {
 
     if (!isActive) {
       card.classList.add("active");
-      card.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-      });
+
+      setTimeout(() => {
+        card.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+      }, 180);
     }
   });
 });

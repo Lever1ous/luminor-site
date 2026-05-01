@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luminor — Текстовая ролевая вселенная</title>
+  <title>Luminor — Главная</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -16,19 +16,19 @@
     </a>
 
     <div class="nav-links">
-      <a href="index.html">Главная</a>
-      <a href="#">Лор</a>
-      <a href="#">Расы</a>
-      <a href="#">Правила</a>
-      <a href="https://discord.com/invite/6WYuSZjRfk" target="_blank">Discord</a>
+      <a class="active-link" href="index.html">Главная</a>
+      <a href="races.html">Расы</a>
+      <a href="lore.html">Лор</a>
+      <a href="rules.html">Правила</a>
+      <a href="anketa.html">Анкета</a>
+      <a href="discord.html">Discord</a>
     </div>
   </nav>
 </header>
 
 <main>
-
   <section class="hero">
-    <div class="hero-card">
+    <div class="hero-card reveal">
       <p class="eyebrow">Project Luminor</p>
       <h1>Мир, где каждое действие становится частью истории</h1>
       <p>
@@ -38,17 +38,13 @@
       </p>
 
       <div class="hero-actions">
-        <a class="btn primary" href="https://discord.com/invite/6WYuSZjRfk" target="_blank">
-          Вступить в Discord
-        </a>
-        <a class="btn ghost" href="#about">
-          Узнать о мире
-        </a>
+        <a class="btn primary" href="https://discord.com/invite/6WYuSZjRfk" target="_blank">Вступить в Discord</a>
+        <a class="btn ghost" href="races.html">Открыть бестиарий</a>
       </div>
     </div>
   </section>
 
-  <section class="content-section" id="about">
+  <section class="section reveal">
     <div class="section-heading">
       <p>О проекте</p>
       <h2>Что ждёт игроков?</h2>
@@ -57,83 +53,20 @@
     <div class="tile-grid">
       <article class="info-tile">
         <h3>12 рас</h3>
-        <p>
-          В мире Luminor представлено 12 рас и более 55 подвидов,
-          вручную прописанных для глубокого ролевого опыта.
-        </p>
+        <p>В мире Luminor представлено множество рас и подвидов, созданных для глубокой текстовой ролевой игры.</p>
       </article>
 
       <article class="info-tile">
         <h3>Живой лор</h3>
-        <p>
-          История мира меняется. События, решения и поступки игроков
-          могут влиять на судьбу государств, народов и целых эпох.
-        </p>
+        <p>История мира развивается вместе с игроками. Ваши действия могут изменить судьбу государств и народов.</p>
       </article>
 
       <article class="info-tile">
         <h3>Свобода выбора</h3>
-        <p>
-          Станьте правителем, наёмником, торговцем, исследователем,
-          преступником или героем. Ограничение только одно — воображение.
-        </p>
+        <p>Станьте правителем, наёмником, торговцем, исследователем, преступником или героем.</p>
       </article>
     </div>
   </section>
-
-  <section class="content-section">
-    <div class="section-heading">
-      <p>Лор</p>
-      <h2>Краткая история мира</h2>
-    </div>
-
-    <div class="accordion-list">
-
-      <details class="lore-tile" open>
-        <summary>Зарождение мира</summary>
-        <p>
-          Никто не знает точного начала мира, однако древние писания
-          разрушенной Церкви Богини Солнца рассказывают о первородном
-          континенте Гурухме.
-        </p>
-        <p>
-          Там могущественные существа, представлявшие каждую расу,
-          впервые встретились и начали делить земли между собой.
-        </p>
-      </details>
-
-      <details class="lore-tile">
-        <summary>Падение Небес</summary>
-        <p>
-          Великое бедствие началось с падения небесного тела на север
-          континента. На месте удара появился кратер, наполненный тьмой.
-        </p>
-        <p>
-          Так мир впервые столкнулся с Бездной — источником ужаса,
-          мутаций, катаклизмов и неизвестной силы.
-        </p>
-      </details>
-
-      <details class="lore-tile">
-        <summary>Священная война</summary>
-        <p>
-          Конфликт между государствами, расами и верой перерос в войну,
-          которая уничтожила значительную часть магов, знаний и старого мира.
-        </p>
-      </details>
-
-      <details class="lore-tile">
-        <summary>Наши дни</summary>
-        <p>
-          Сейчас мир Luminor живёт в 1725 году. Старые раны ещё не зажили,
-          Бездна остаётся угрозой, а будущее зависит от тех, кто осмелится
-          оставить след в истории.
-        </p>
-      </details>
-
-    </div>
-  </section>
-
 </main>
 
 <footer class="footer">
